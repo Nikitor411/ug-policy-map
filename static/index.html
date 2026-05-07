@@ -6,35 +6,48 @@
     <style>
         body { margin: 0; display: flex; flex-direction: column; height: 100vh; }
         #cy { flex: 1; background-color: #fafafa; border: 1px solid #ccc; }
-        .toolbar { padding: 8px; background: #eee; display: flex; gap: 10px; }
+        .toolbar { padding: 8px; background: #eee; display: flex; gap: 10px; flex-wrap: wrap; }
         button { padding: 6px 12px; cursor: pointer; }
     </style>
     <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
 </head>
 <body>
     <div class="toolbar">
-        <button onclick="resetView()">Сбросить вид</button>
-        <button onclick="highlightAllow()">Только разрешающие</button>
-        <button onclick="highlightDeny()">Только запрещающие</button>
-        <button onclick="showAll()">Все правила</button>
+        <button id="btnReset">Сбросить вид</button>
+        <button id="btnAllow">Только разрешающие</button>
+        <button id="btnDeny">Только запрещающие</button>
+        <button id="btnAll">Все правила</button>
         <span>💡 Нажмите на узел, чтобы подсветить связанные правила.</span>
     </div>
     <div id="cy"></div>
 
     <script>
-        fetch('/api/graph')
-            .then(res => res.json())
-            .then(data => {
-                initCytoscape(data.elements);
-            });
+        (function() {
+            fetch('/api/graph')
+                .then(res => {
+                    if (!res.ok) throw new Error('Ошибка загрузки данных: ' + res.status);
+                    return res.json();
+                })
+                .then(data => {
+                    console.log('Данные графа загружены');
+                    initCytoscape(data.elements);
+                })
+                .catch(err => console.error('Ошибка:', err));
+        })();
 
         let cy;
 
         function initCytoscape(elements) {
+            if (typeof cytoscape === 'undefined') {
+                console.error('Cytoscape.js не загрузилась');
+                return;
+            }
+
             cy = cytoscape({
                 container: document.getElementById('cy'),
                 elements: elements,
                 style: [
+                    // Стиль для родительских узлов (зон)
                     {
                         selector: 'node[type="zone"]',
                         style: {
@@ -48,11 +61,12 @@
                             'text-halign': 'center',
                             'padding': 10,
                             'shape': 'round-rectangle',
-                            'width': 'label',
-                            'height': 'label',
+                            'width': 120,
+                            'height': 60,
                             'text-margin-y': -5,
                         }
                     },
+                    // Стиль для дочерних узлов внутри зон
                     {
                         selector: 'node[parent]',
                         style: {
@@ -64,10 +78,11 @@
                             'text-valign': 'center',
                             'padding': 6,
                             'shape': 'ellipse',
-                            'width': 'label',
-                            'height': 'label',
+                            'width': 80,
+                            'height': 40,
                         }
                     },
+                    // Стиль для разрешающих рёбер
                     {
                         selector: 'edge[action="allow"]',
                         style: {
@@ -83,6 +98,7 @@
                             'text-background-opacity': 0.7,
                         }
                     },
+                    // Стиль для запрещающих рёбер
                     {
                         selector: 'edge[action="deny"]',
                         style: {
@@ -97,31 +113,49 @@
                             'text-background-color': '#fff',
                             'text-background-opacity': 0.7,
                         }
-                    },
-                    {
-                        selector: 'edge:hover',
-                        style: { 'width': 5 }
-                    },
-                    {
-                        selector: 'node:hover',
-                        style: { 'border-color': '#03a9f4', 'border-width': 3 }
                     }
                 ],
                 layout: {
-                    name: 'cose-bilkent',
-                    animate: false,
+                    name: 'cose',          // Встроенный force-directed layout
                     fit: true,
                     padding: 30,
                     nodeRepulsion: 4000,
                     idealEdgeLength: 120,
                     nodeDimensionsIncludeLabels: true,
+                    animate: false
                 }
             });
 
-            cy.on('tap', 'node', function(evt) {
+            // Подсветка рёбер и соседей при наведении мыши (замена :hover)
+            cy.on('mouseover', 'node', function(evt) {
                 const node = evt.target;
+                node.connectedEdges().style({
+                    'line-color': '#ff9800',
+                    'target-arrow-color': '#ff9800',
+                    'width': 5
+                });
+                node.neighborhood().nodes().style({
+                    'border-color': '#ff9800',
+                    'border-width': 3
+                });
+                node.style({
+                    'border-color': '#ff5722',
+                    'border-width': 4
+                });
+            });
+
+            cy.on('mouseout', 'node', function(evt) {
+                const node = evt.target;
+                // Возвращаем исходные стили, просто удаляя переопределения
                 cy.edges().removeStyle();
                 cy.nodes().removeStyle();
+            });
+
+            // Выделение по клику (оранжевое) остаётся
+            cy.on('tap', 'node', function(evt) {
+                cy.edges().removeStyle();
+                cy.nodes().removeStyle();
+                const node = evt.target;
                 const connectedEdges = node.connectedEdges();
                 connectedEdges.style({
                     'line-color': '#ff9800',
@@ -139,18 +173,32 @@
                 });
             });
 
+            // Сброс по клику на фон
             cy.on('tap', function(evt) {
                 if (evt.target === cy) {
                     cy.edges().removeStyle();
                     cy.nodes().removeStyle();
                 }
             });
-        }
 
-        function resetView() { cy.fit(); cy.edges().removeStyle(); cy.nodes().removeStyle(); }
-        function highlightAllow() { cy.edges().hide(); cy.edges('[action="allow"]').show(); }
-        function highlightDeny() { cy.edges().hide(); cy.edges('[action="deny"]').show(); }
-        function showAll() { cy.edges().show(); }
+            // Привязываем кнопки
+            document.getElementById('btnReset').addEventListener('click', function() {
+                cy.fit();
+                cy.edges().removeStyle();
+                cy.nodes().removeStyle();
+            });
+            document.getElementById('btnAllow').addEventListener('click', function() {
+                cy.edges().hide();
+                cy.edges('[action="allow"]').show();
+            });
+            document.getElementById('btnDeny').addEventListener('click', function() {
+                cy.edges().hide();
+                cy.edges('[action="deny"]').show();
+            });
+            document.getElementById('btnAll').addEventListener('click', function() {
+                cy.edges().show();
+            });
+        }
     </script>
 </body>
 </html>
