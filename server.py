@@ -14,9 +14,9 @@ def load_json(filename):
         return json.load(f)
 
 # Загружаем справочники один раз при старте
-zones_list = load_json('zones_info copy.json')
+zones_list = load_json('zones.json')
 ip_lists_meta = load_json('ipaddr_list_random.json')
-services_list = load_json('services_list copy.json')
+services_list = load_json('services.json')
 
 # Строим словари: id -> имя
 zone_names = {z['id']: z['name'] for z in zones_list}
