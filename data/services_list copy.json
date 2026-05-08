@@ -1,0 +1,4164 @@
+[
+    {
+        "id": 239,
+        "name": "z39.50",
+        "guid": "49d14bc0-2323-4b92-b58e-31d344d3c8e3",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "210",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "210",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 151,
+        "name": "XMPP-SERVER",
+        "guid": "9758e1ed-bc6f-45e8-ad6e-bc6249ae460c",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5269",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 150,
+        "name": "XMPP-CLIENT",
+        "guid": "39ba22e7-c80f-44cf-843a-b15bbee34366",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5222",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 281,
+        "name": "WinRM",
+        "guid": "88d0c067-537b-49e0-9b8b-a8a27e4264f5",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5985-5986",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 149,
+        "name": "VPN PPTP",
+        "guid": "09d4ce34-ccf8-4113-8f44-bee3bb85f521",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1723",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "gre",
+                "port": "",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 148,
+        "name": "VipNet Client",
+        "guid": "91093ac1-aa28-4b43-9c11-64948b1f69e7",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "5777",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "55777",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 147,
+        "name": "UPnP",
+        "guid": "57b0384b-5122-41b7-a1ad-7ad40d7e7064",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5000",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 226,
+        "name": "UPD-500",
+        "guid": "5ede8c84-a8e2-4d04-aab7-ddc6a5214edd",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "500",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 277,
+        "name": "udp/4000-50000",
+        "guid": "19ffd523-9451-46bc-ad95-f82dfabbf88f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "4000-50000",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 183,
+        "name": "UDP-7715",
+        "guid": "716f99b5-7b1a-4ef9-b6b7-33c5d0216087",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "7715",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 182,
+        "name": "UDP-7714",
+        "guid": "87af72db-3cd6-4a52-8308-aea77972f494",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "7714",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 181,
+        "name": "UDP-7712",
+        "guid": "6dd1aa0e-82b3-4852-9491-0f8795fa6941",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "7712",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 232,
+        "name": "UDP-7554",
+        "guid": "0ecda788-a565-4d9d-a53f-3dab1038b683",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "7554",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 234,
+        "name": "UDP-7445",
+        "guid": "a0328757-212d-4d30-a933-5c80f9437029",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "7445",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 295,
+        "name": "UDP-516",
+        "guid": "4754c9f4-d655-4e01-bffa-cdef00982b8e",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "516",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 195,
+        "name": "UDP-514",
+        "guid": "e84fd633-f3d4-4026-8c7f-15c61ae200c2",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "514",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 231,
+        "name": "UDP-5068",
+        "guid": "bd3a5c26-3c51-4362-b3f8-4294b41dd5ca",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "5068",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 202,
+        "name": "UDP-50000-55000",
+        "guid": "d35e7357-b52e-4c01-bb63-46a56947a8e7",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "50000-55000",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 225,
+        "name": "UDP-443",
+        "guid": "8d7f5af2-f823-4468-96f9-fc64a9141e76",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "443",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 310,
+        "name": "UDP-3025",
+        "guid": "e0b61edc-1ba5-4a8b-a716-27e62c6caf13",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "3025",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 238,
+        "name": "UDP-3000",
+        "guid": "fd460f11-7fcb-4276-9366-ac262982e702",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "3000",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 271,
+        "name": "UDP-22443",
+        "guid": "84be6878-03fd-4737-b1c0-b411c890f276",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "22443",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 317,
+        "name": "UDP-2047",
+        "guid": "2b694c89-2973-4df0-9e90-c5984061e1fe",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "2047",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 316,
+        "name": "UDP-2046",
+        "guid": "9523e96f-b027-48bd-b4a0-df8fe13be86b",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "2046",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 299,
+        "name": "UDP-2025",
+        "guid": "baed536f-0b26-480b-8b95-b07ae790040a",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "2025",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 230,
+        "name": "UDP-16384-32768",
+        "guid": "0a876f8b-31ec-4399-bdec-eaea12b56ef7",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "16384-32768",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 233,
+        "name": "UDP-1350",
+        "guid": "2ff4c4c6-9d9e-451b-9c2f-c6b5f756a720",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "1350",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 298,
+        "name": "UDP-1025",
+        "guid": "bbc9d4bc-76e6-4a81-bfb2-704b718ccddc",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "1025",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 244,
+        "name": "UDP 9000",
+        "guid": "eeec4c2c-ca40-4d84-8170-618ab560afd5",
+        "description": "UDP 9000",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "9000",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 253,
+        "name": "UDP 63000-64000",
+        "guid": "3b0b6515-f529-423b-afe4-e7db814bddc4",
+        "description": "UDP 63000-64000",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "63000-64000",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 256,
+        "name": "UDP 15111",
+        "guid": "258f55f3-d7d7-4521-90d2-46c269d73096",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "15111",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 254,
+        "name": "UDP 15000",
+        "guid": "2731d6c2-0401-4a57-b4b0-26094062af2c",
+        "description": "UDP 15000",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "15000",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 179,
+        "name": "UDP 10000-20000",
+        "guid": "ae90fcfb-24f0-49d9-bf37-5bcc2daebc1d",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "10000-20000",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 203,
+        "name": "Trueconf",
+        "guid": "df0c65bc-c155-4dad-b9a9-709b60609a3f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "4307",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 146,
+        "name": "Torrents",
+        "guid": "b82e32ef-67fa-4816-bd93-e76a5770177c",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "6881-6999",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "6881-6999",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 112,
+        "name": "TFTP",
+        "guid": "c5959e7d-d147-4d57-a0ed-6a60bfd11ca8",
+        "description": "Trivial File Transfer Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "69",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 119,
+        "name": "Telnet",
+        "guid": "29373962-e697-4f3a-81e9-dde10ea236ac",
+        "description": "Telnet Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "23",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 161,
+        "name": "TCP_8443",
+        "guid": "26c4a939-6438-4557-81c6-77b22509d4e0",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8443",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 160,
+        "name": "TCP_8442",
+        "guid": "3d9a0aa8-6405-469a-bcaf-0ab6bd9535cb",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8442",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 227,
+        "name": "tcp/upd-7070",
+        "guid": "358eb9ea-cfb7-4507-8633-3a8ffe5a8908",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "7070",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "7070",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 300,
+        "name": "TCP/UDP-8301",
+        "guid": "da6b8f01-0098-47c1-83dc-1be80abdc329",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8301",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "8301",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 301,
+        "name": "TCP/UDP-8300",
+        "guid": "ebbda295-b168-4f65-bb62-c81a053e3a12",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8300",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "8300",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 199,
+        "name": "TCP/UDP-5672",
+        "guid": "85c55edc-fc8a-458c-aad4-2de8636fe56f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5672",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "5672",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 294,
+        "name": "TCP/UDP-5601",
+        "guid": "132f4b14-f102-4128-97a1-fba4d238b9fa",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5601",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "5601",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 241,
+        "name": "tcp/udp-3380",
+        "guid": "77c81c97-1056-4da7-8513-59498a55fe3b",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3380",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "3380",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 242,
+        "name": "tcp/udp-33443",
+        "guid": "991ea283-2989-4cba-84c8-05bd6f9f8c04",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "33443",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "33443",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 224,
+        "name": "TCP/UDP-2049",
+        "guid": "69c6a1ea-b442-47fe-94d1-9130b8f511bf",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "2049",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "2049",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 291,
+        "name": "tcp/udp-2000",
+        "guid": "30adc5ca-608c-496d-82bb-3f3ee0246ae8",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "2000",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "2000",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 326,
+        "name": "TCP/UDP-1700",
+        "guid": "8285eea0-03f2-4faf-9b45-4a1fc9e6db89",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1700",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1700",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 314,
+        "name": "tcp/udp-16732",
+        "guid": "9a117edb-e788-42d2-aabf-d9d021959f5a",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "16732",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "16732",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 251,
+        "name": "TCP/UDP-1660-1691",
+        "guid": "d4c66ad0-e5b5-4b39-8bdb-b6acd91dba64",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1660-1691",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1660-1691",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 290,
+        "name": "TCP/UDP-15672",
+        "guid": "63e73422-150b-486b-b145-a56ab9183953",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "15672",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "15672",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 223,
+        "name": "TCP/UDP-1560-1591",
+        "guid": "a8347912-ef57-4875-9744-0eecd222a7bc",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1560-1591",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1560-1591",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 222,
+        "name": "TCP/UDP-1541",
+        "guid": "860cc0b0-fd65-49c3-8b48-25e8512c0f07",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1541",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1541",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 250,
+        "name": "TCP/UDP-1540",
+        "guid": "c035d0bd-afef-4808-939f-3cf888f33955",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1540",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1540",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 263,
+        "name": "TCP/UDP-12301",
+        "guid": "f5cc4a26-5b27-44b7-b580-1d68f543f847",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "12301",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "12301",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 293,
+        "name": "TCP/UDP-123",
+        "guid": "dbd3752a-1ae6-4733-8f85-f911465092ad",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "123",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "123",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "123",
+                "app_proto": "tcp",
+                "source_port": "123"
+            },
+            {
+                "proto": "udp",
+                "port": "123",
+                "app_proto": "udp",
+                "source_port": "123"
+            }
+        ]
+    },
+    {
+        "id": 235,
+        "name": "TCP/UDP-111",
+        "guid": "763edb33-d291-4e33-827a-69c18cbf9582",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "111",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "111",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 268,
+        "name": "TCP/UDP 49152-65535",
+        "guid": "b0a22cdc-a816-42cb-bb9e-42a43f7894c1",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "49152-65535",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "49152-65535",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 245,
+        "name": "TCP/UDP 4433",
+        "guid": "286d3123-dc74-48d0-819c-4b65dde6ef2f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "4433",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "4433",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 261,
+        "name": "tcp/udp 11515",
+        "guid": "f7e63411-75d3-4b3b-b806-cce6de58645d",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "11515",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "11515",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 260,
+        "name": "tcp/udp 11514",
+        "guid": "8813d56e-698c-46cc-8a64-ab4f0f88649b",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "11514",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "11514",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 145,
+        "name": "TCP/UDP 1000-65535",
+        "guid": "a8ab80ef-c557-4560-baf1-711daf5fb772",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1000-65535",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1000-65535",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 305,
+        "name": "TCP/8088",
+        "guid": "ef0a5dc1-7954-4712-9844-e647f188fecf",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8088",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 280,
+        "name": "tcp/6160",
+        "guid": "5317cf1c-c8aa-45ff-bdb6-ae36e261ab1c",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "6160",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 322,
+        "name": "TCP/55000",
+        "guid": "2087b335-301b-418c-bdee-8aa97f6d0104",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "55000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 288,
+        "name": "tcp/54320",
+        "guid": "c680caec-d6fb-4db3-877e-4e49dd4e4d55",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "54320",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 264,
+        "name": "TCP/49668",
+        "guid": "51dcad6b-7c4d-4210-af06-74c1c8ccb313",
+        "description": "(RPC for LSA, SAM, NetLogon) – This starts with a request to port 135",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "49668",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 276,
+        "name": "tcp/4001",
+        "guid": "84687f24-48d0-47c8-be90-2bf0b0860b03",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "4001",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 285,
+        "name": "tcp/3060",
+        "guid": "d218fe57-65dd-4b4e-a648-8b0cfbbca731",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3060",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 286,
+        "name": "tcp/3001",
+        "guid": "8347fa8e-5b16-40e6-bd62-cf6e7510ccda",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3001",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 284,
+        "name": "tcp/1688",
+        "guid": "72bab872-8167-4012-8d6f-17578868bef7",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1688",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 308,
+        "name": "tcp-udp/8083",
+        "guid": "7f52ba99-942e-45f9-8c18-76a27480345f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8083",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "8083",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 258,
+        "name": "tcp-udp/8000-8020",
+        "guid": "0e67f8e3-bd3c-4928-9a5d-6151c159d278",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8000-8020",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "8000-8020",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 319,
+        "name": "tcp-udp/7860",
+        "guid": "d0005d9f-34d0-4c58-b2a6-ba676e6cfd2d",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "7860",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "7860",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 279,
+        "name": "tcp-udp/5060",
+        "guid": "85368432-6100-4a1c-abc1-1b79c8d3dff9",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5060",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "5060",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 303,
+        "name": "TCP-UDP/50100",
+        "guid": "1f407788-6222-45dd-97f7-7be75d4e52ff",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "50100",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "50100",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 246,
+        "name": "tcp-udp/5000-6000",
+        "guid": "2f8caaef-156a-4044-acbb-5debe8084fd3",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5000-6000",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "5000-6000",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 283,
+        "name": "tcp-udp/4172",
+        "guid": "913f038d-eef8-4a28-bce0-80c2f050ba43",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "4172",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "4172",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 311,
+        "name": "tcp-udp/3008",
+        "guid": "d53889ef-ee02-4a3d-9078-42a027a6770d",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3008",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "3008",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 313,
+        "name": "tcp-udp/3002",
+        "guid": "9f4caf87-aa55-46cc-b068-6bccc6d76bcc",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3002",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "3002",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 247,
+        "name": "tcp-udp/25565",
+        "guid": "717a8798-c592-48f7-984f-3e7a93216b85",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "25565",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "25565",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 278,
+        "name": "tcp-udp/1270",
+        "guid": "9ce81067-f9fb-487a-8a68-963c93cd744f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1270",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1270",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 320,
+        "name": "TCP-UDP-9200",
+        "guid": "ec017621-89ad-4ff3-be33-d5b6424a51ae",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "9200",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "9200",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 169,
+        "name": "TCP-UDP-8002",
+        "guid": "32ffad29-3ff6-4964-99a2-dd01df2e40b5",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8002",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "8002",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 168,
+        "name": "TCP-UDP-8001",
+        "guid": "6d88223a-0a9d-4391-a778-f12d8feb299d",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8001",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "8001",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 220,
+        "name": "TCP-UDP-50636",
+        "guid": "a8ccec37-e1d0-41d4-88ea-6dd5ba1efb0a",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "50636",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "50636",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 315,
+        "name": "TCP-UDP-50025",
+        "guid": "d3527f9d-919f-4a19-a5f4-f455ec47dc1d",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "50025",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "50025",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 297,
+        "name": "tcp-99",
+        "guid": "dde195a7-66b1-4d68-86fb-64d5dbbac795",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "99",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 302,
+        "name": "TCP-9443",
+        "guid": "873a9131-1319-43a2-85be-94bfe1c312c7",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "9443",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 267,
+        "name": "TCP-9389",
+        "guid": "e84f3336-7b1d-44d9-9d6c-fb0718eb6804",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "9389",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 324,
+        "name": "TCP-9099",
+        "guid": "b037e2a5-f5a3-48df-bb30-c0f4dc14aa5c",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "9099",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 259,
+        "name": "TCP-9090",
+        "guid": "6e2ad47e-1a0a-4257-98a5-78d7663ca420",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "9090",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 307,
+        "name": "TCP-9001",
+        "guid": "29ba285a-45b0-46a4-b233-540c9da6491a",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "9001",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 221,
+        "name": "TCP-90",
+        "guid": "330e7393-5f82-46ca-9e3e-e211498a7535",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "90",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 192,
+        "name": "TCP-8894",
+        "guid": "80f4046a-08e9-445f-8d24-9acc0eb554c7",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8894",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 191,
+        "name": "TCP-8893",
+        "guid": "71e28355-2295-4756-974d-ccb6df16336c",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8893",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 269,
+        "name": "TCP-8834",
+        "guid": "af345dd5-0376-47b4-8d6d-5a5199568d05",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8834",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 212,
+        "name": "TCP-8531",
+        "guid": "55221059-8ddf-4dc8-b40c-f0a9a1b94f7f",
+        "description": "Software update port secure",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8531",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 173,
+        "name": "TCP-8530",
+        "guid": "564afa4b-0afa-4b15-8d5f-6e030f74e6cb",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8530",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 325,
+        "name": "TCP-8201",
+        "guid": "b579cd20-ef9e-4bff-8d26-488fda41bc66",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8201",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 323,
+        "name": "TCP-8200",
+        "guid": "a0191ffd-c6fd-4307-bcdc-e542471301c6",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8200",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 189,
+        "name": "TCP-82",
+        "guid": "43cf967f-311e-492f-a423-8d07d14600f2",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "82",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 190,
+        "name": "TCP-8181",
+        "guid": "fbca3458-8fef-4fe4-aabd-3e4b4c53bcbb",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8181",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 218,
+        "name": "TCP-8140",
+        "guid": "2a76066b-ece9-4313-951b-9d368a4546bf",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8140",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 287,
+        "name": "TCP-8082",
+        "guid": "f4139710-c796-41b5-8ce4-144704a3a2f1",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8082",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 198,
+        "name": "TCP-8081",
+        "guid": "61cab2ac-c24e-4476-bb8f-973f088077c3",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8081",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 252,
+        "name": "TCP-8005",
+        "guid": "0e67ad51-817c-41af-9136-69553f5e62d0",
+        "description": "TCP 8005",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8005",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 180,
+        "name": "TCP-7724",
+        "guid": "39b04f6b-cb81-49a5-9369-3d9dac3f6c14",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "7724",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 197,
+        "name": "TCP-587",
+        "guid": "eee35586-1ab9-40e6-85b2-bc3314daa42a",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "587",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 211,
+        "name": "TCP-5724",
+        "guid": "c26d1761-42c7-4d0d-85cd-b28fc3adf560",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5724",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 187,
+        "name": "TCP-5723",
+        "guid": "0e5e554b-a46e-418a-a414-367b0874f35a",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5723",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 282,
+        "name": "tcp-5504",
+        "guid": "90838260-1be7-41b5-bcf4-45bef88a2e8b",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5504",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 273,
+        "name": "TCP-5432",
+        "guid": "84751bdc-ea74-450b-ba9b-2ec771f25289",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5432",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 193,
+        "name": "TCP-514",
+        "guid": "efba3f76-793d-4365-85dc-cb789e68b050",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "514",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 292,
+        "name": "TCP-5044",
+        "guid": "2e677d1d-0236-46af-a739-9cf5767c39b1",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5044",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 318,
+        "name": "TCP-5001",
+        "guid": "b323ae1b-22ec-47bb-847a-d2d73af2f881",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5001",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 167,
+        "name": "TCP-5000",
+        "guid": "ae23ec41-236b-449d-bb01-6d3fadf85bfb",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 200,
+        "name": "TCP-49443",
+        "guid": "cf0cf6c3-eed4-41bb-a202-ec82333b3689",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "49443",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 312,
+        "name": "TCP-4505-4506",
+        "guid": "6033d533-29ed-47bd-a377-38514b4897f3",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "4505-4506",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 175,
+        "name": "TCP-445",
+        "guid": "ff4044f4-60d5-4de7-99e6-a749c2548c02",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "445",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 196,
+        "name": "TCP-4443",
+        "guid": "adaf98bc-7cd5-4465-bc51-2c4462428e6f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "4443",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 186,
+        "name": "TCP-33322",
+        "guid": "a1e8674d-4a76-4a06-8f71-71a695bfbd51",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "33322",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 240,
+        "name": "tcp-3322",
+        "guid": "6970bc8b-8159-4100-8d75-86b11ab503aa",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3322",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 266,
+        "name": "TCP-3269",
+        "guid": "0c3b498c-7b8e-4fb5-86b8-7a0fab622307",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3269",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 265,
+        "name": "TCP-3268",
+        "guid": "cb0584dd-87f0-48ef-93a5-1cb162e770e2",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3268",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 272,
+        "name": "TCP-32111",
+        "guid": "6b0cf887-c00e-4a87-b2ed-2d130e2e9c25",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "32111",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 296,
+        "name": "tcp-3189",
+        "guid": "0a93a8f4-d3a6-4293-81fd-027a291ef44b",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3189",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 188,
+        "name": "TCP-3128",
+        "guid": "d4348671-a1e6-4ec1-8cb3-d06f02705f6f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3128",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 289,
+        "name": "TCP-3100",
+        "guid": "beb12949-d31c-4396-9878-a07e64706156",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3100",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 309,
+        "name": "TCP-3025",
+        "guid": "f09da86c-02bc-49ac-943b-d2af23f7f7b1",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3025",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 237,
+        "name": "TCP-3000",
+        "guid": "4d64b947-b9f1-4cee-8ee7-a7b04af6cfc4",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 219,
+        "name": "TCP-2270",
+        "guid": "b3c9806d-412d-43cc-ab14-2c9216b11996",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "2270",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 270,
+        "name": "TCP-22443",
+        "guid": "2029ec8d-5f3c-4934-9b89-f1c7b15314d7",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "22443",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 275,
+        "name": "TCP-1947",
+        "guid": "a6d73fe4-3292-4d54-82c3-9acf8bf3a2b8",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1947",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 184,
+        "name": "TCP-1935",
+        "guid": "e02d2a72-ca42-432a-849d-74fbb013c85c",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1935",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 201,
+        "name": "TCP-15672",
+        "guid": "5b36c19a-d6b9-4db2-a263-2d31ce75c06c",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "15672",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 321,
+        "name": "TCP-1515",
+        "guid": "9d65b574-2db6-487d-888a-2b7c82848d70",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1515",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 194,
+        "name": "TCP-1514",
+        "guid": "f376c591-77d3-4c54-8c98-1554dc6c60fa",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1514",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 274,
+        "name": "TCP-15085",
+        "guid": "b8476f0f-bc7d-4e85-927f-425d9052bc41",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "15085",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 172,
+        "name": "TCP-15000",
+        "guid": "021481dd-7c9f-4942-841f-f096eb5c4df2",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "15000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 217,
+        "name": "TCP-14001",
+        "guid": "7f4bc157-5e0d-4dcd-a588-2ce20a4f0d96",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "14001",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 171,
+        "name": "TCP-14000",
+        "guid": "51fda219-c0e9-45de-bf5a-ac263f35070b",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "14000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 304,
+        "name": "TCP-135",
+        "guid": "3fe6e5e7-0bb2-45d8-8ec5-fd084054fd4a",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "135",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 215,
+        "name": "TCP-13111",
+        "guid": "88237197-e63c-4144-bbd6-4825943b9db9",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "13111",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 216,
+        "name": "TCP-13001",
+        "guid": "491421bb-b383-439b-81ae-75da96b2f8ab",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "13001",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 170,
+        "name": "TCP-13000",
+        "guid": "1c6f7ce9-fcae-4ea9-b054-fd749b0e6523",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "13000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 185,
+        "name": "TCP-1111",
+        "guid": "558074ae-967b-40fb-a760-bcde6fc88ec3",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1111",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 214,
+        "name": "TCP-10123",
+        "guid": "0f914aa3-fbfa-4e75-90ad-6c17a44952f0",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "10123",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 248,
+        "name": "tcp-10051",
+        "guid": "43fe777e-45c0-4ad8-b379-4cd6533bb413",
+        "description": "zabbix agent",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "10051",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 249,
+        "name": "tcp-10050",
+        "guid": "1ba59bee-83f4-4208-b22a-f9b3f617564c",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "10050",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 243,
+        "name": "TCP 9000",
+        "guid": "396f5ad6-e9c6-448c-a8df-aa7e7e4135ae",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "9000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 255,
+        "name": "TCP 8060-8061",
+        "guid": "5f7b423a-b1eb-4bf4-bfed-b63415f1fdf9",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8060-8061",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 257,
+        "name": "TCP 17000",
+        "guid": "bda6db1c-da91-4aa6-9bac-76ee75aecfcb",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "17000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 144,
+        "name": "SVN",
+        "guid": "39e6c591-7fac-4664-afd1-32d7a8e50743",
+        "description": "Subversion",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3690",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "3690",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 236,
+        "name": "STUN",
+        "guid": "13765115-894c-448d-a947-da34a0a039b4",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3478",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "3478",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "5349",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "5349",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 143,
+        "name": "SSH",
+        "guid": "98023841-363c-4c8b-84cf-65694c59e1a3",
+        "description": "Secure SHell",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "22",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 208,
+        "name": "SRTP_43000-45000",
+        "guid": "12d195c9-fda3-45a9-a426-48db229e7dd6",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "43000-45000",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 142,
+        "name": "SNMPTRAP",
+        "guid": "befc6f3e-4748-430a-b5b1-ba253e806217",
+        "description": "Simple Network Management Protocol Trap",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "162",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "162",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 141,
+        "name": "SNMP",
+        "guid": "1f9e57b5-efe1-46bf-8041-2e48e79457d7",
+        "description": "Simple Network Management Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "161",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "161",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 114,
+        "name": "SMTPS",
+        "guid": "9ff245b5-cf3d-48de-9df4-339347c27c17",
+        "description": "Simple Mail Transfer Protocol over SSL",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "smtps",
+                "port": "465",
+                "app_proto": "smtps",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 113,
+        "name": "SMTP",
+        "guid": "de68b9a6-d1b2-4dcd-9e4d-56de4447dd76",
+        "description": "Simple Mail Transfer Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "smtp",
+                "port": "25",
+                "app_proto": "smtp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 140,
+        "name": "SMB",
+        "guid": "554dfe0d-fd65-4ad4-beb1-8843305ec741",
+        "description": "Server Message Block",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "445",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 163,
+        "name": "Skype-udp",
+        "guid": "5a312f84-c199-48cb-ba1d-d7d17a65d29d",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "3478-3481",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 164,
+        "name": "Skype-tcp-50000-65000",
+        "guid": "2edb817d-10d3-46e0-a88a-174edbb584b6",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "50000-65000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 165,
+        "name": "Skype-tcp-16000-26000",
+        "guid": "9cdd9ceb-0195-4815-a95f-17ed72251e29",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "16000-26000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 139,
+        "name": "SIP",
+        "guid": "1f24b7b8-b98b-4a4a-985f-2d70140ff545",
+        "description": "Session Initiation Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5060-5061",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "5060",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 178,
+        "name": "SFTP",
+        "guid": "a4323f94-6214-4f78-9ccc-89a951f741d5",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "2022",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 153,
+        "name": "SCADA",
+        "guid": "a43a6558-93c4-4d20-8cf9-e8e83035ef29",
+        "description": "SCADA service",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "2404",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 209,
+        "name": "RTSP_554",
+        "guid": "85c9bb0d-e33f-4085-ae26-4645bb54a7ac",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "554",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 228,
+        "name": "rtsp59554",
+        "guid": "8e05ae2f-fcc3-4668-98db-75b8b7567710",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "59554",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 210,
+        "name": "RTP_6001-8001",
+        "guid": "75e024bc-0f61-4cf9-9b70-7e278f8f5fd5",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "6001-8001",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 138,
+        "name": "RTP",
+        "guid": "a1a50cca-88da-4194-82a6-acbe834de88e",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5004-5005",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "5004-5005",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 137,
+        "name": "Rsync",
+        "guid": "8ad3d484-ae05-456f-8179-498b8147f172",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "873",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 159,
+        "name": "RG_RDP",
+        "guid": "e1caf9ad-ecd1-4dc7-9e6b-9ebceb314f87",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3391",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "3391",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 136,
+        "name": "RDP",
+        "guid": "ae347246-479d-4d58-b516-a75fa7510c45",
+        "description": "Remote Desktop Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3389",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "3389",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 135,
+        "name": "Radmin",
+        "guid": "7953a8d8-4cbd-4dc7-95f4-ae927438c664",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "4899",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 134,
+        "name": "Radius",
+        "guid": "fcd09180-d99a-4d6f-b038-684799ca6a8d",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1645-1646",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1645-1646",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 152,
+        "name": "Quick UDP Internet Connections",
+        "guid": "f8b92764-5e07-4e6f-96db-5f384235ec93",
+        "description": "Google QUIC protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "443",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "80",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 213,
+        "name": "PXE",
+        "guid": "048c28a2-60ee-45bf-b431-58b5718969c5",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "4011",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 133,
+        "name": "Postgres SQL",
+        "guid": "0b027f32-c705-4665-866c-bc4c31409867",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5432",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 116,
+        "name": "POP3S",
+        "guid": "cc7d5564-1467-4a50-bec0-13f6b65707ad",
+        "description": "Post Office Protocol over SSL",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "pop3s",
+                "port": "995",
+                "app_proto": "pop3s",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 115,
+        "name": "POP3",
+        "guid": "404bcf60-3d80-496e-95bc-751b73bf45e7",
+        "description": "Post Office Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "pop3",
+                "port": "110",
+                "app_proto": "pop3",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 132,
+        "name": "OpenVPN",
+        "guid": "65a8f84a-cd67-4313-a249-58cdca423256",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1194",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1194",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 229,
+        "name": "OBJ_SVC_TRASSIR05",
+        "guid": "9239281a-af3e-450d-904e-08eef5187fd6",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "40000-65535",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "40000-65535",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "554-555",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "554-555",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 154,
+        "name": "OBJ_GRP_SVC_VIPNET",
+        "guid": "adfda623-0d10-4a34-a8d3-6049d838afb2",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "2048",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "2050",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "55777",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "55778",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 156,
+        "name": "OBJ_GRP_SVC_OPENVPN",
+        "guid": "9edbda46-3694-4480-b832-c37e37d6dded",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1194",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1194",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "1198",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1198",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "1199",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1199",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 155,
+        "name": "OBJ_GRP_SVC_IPSEC",
+        "guid": "35893ee2-d203-4789-8fb0-2343e0e0699f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "1701",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "500",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "4500",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "esp",
+                "port": "",
+                "app_proto": "esp",
+                "source_port": ""
+            },
+            {
+                "proto": "ah",
+                "port": "",
+                "app_proto": "ah",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 131,
+        "name": "NTP",
+        "guid": "74a2968c-9325-498c-a5ba-8af24131b7e3",
+        "description": "Network Time Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "123",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "123",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 130,
+        "name": "NetMeeting",
+        "guid": "c979c514-8315-4cc7-a193-11e0e954e54f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1503",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 129,
+        "name": "NetBIOS",
+        "guid": "ed4defb0-c7ee-4b18-ad15-6cf712d78f4e",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "138",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "137",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "139",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "138",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "137",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 128,
+        "name": "MySQL",
+        "guid": "940dc9ed-b85b-4211-8f7a-5d604a27784d",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3306",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 127,
+        "name": "MS SQL",
+        "guid": "ef8be4c3-35f5-4cb8-aee8-c75a6e09a851",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1433-1434",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 126,
+        "name": "Mail Agent",
+        "guid": "03acc79e-fabb-4b4f-b0ce-1a5cb1c0cf0f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "2041-2042",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 177,
+        "name": "Ldaps",
+        "guid": "a7091e45-1e7d-43ac-bd69-a919b0d70dc3",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "636",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "636",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 157,
+        "name": "Ldap",
+        "guid": "f3e276e8-9b72-4438-8527-1d94ae05f364",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "389",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "389",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 176,
+        "name": "Kerberos",
+        "guid": "a6306011-b86d-4ccf-8e0a-3b0729d9efc5",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "88",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "88",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 125,
+        "name": "IRC",
+        "guid": "2015a30d-9d91-4051-a2ad-607c2650e562",
+        "description": "Internet Relay Chat",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "6665-6669",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 124,
+        "name": "IPSec",
+        "guid": "52583049-002a-47b7-8c38-7b3348b040ae",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "esp",
+                "port": "",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "ah",
+                "port": "",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "4500",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 118,
+        "name": "IMAPS",
+        "guid": "efb24f4f-452b-4464-898e-a03c30128db5",
+        "description": "Internet Mail Access Protocol over SSL",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "993",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 117,
+        "name": "IMAP",
+        "guid": "5a36d548-6c3e-4e1a-8b02-b9b41ad7cedc",
+        "description": "Internet Mail Access Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "143",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 123,
+        "name": "ICQ",
+        "guid": "e3e6bbee-177d-427d-9b1a-7823102851aa",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "5190",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 110,
+        "name": "HTTPS Proxy",
+        "guid": "a3681b8f-9e6b-4c47-abc2-9e4ef4cf91f2",
+        "description": "Hypertext Transport Protocol over SSL",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8091",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 109,
+        "name": "HTTPS",
+        "guid": "ca09514a-0bd7-4999-bdb9-50b9368dd6d7",
+        "description": "Hypertext Transport Protocol over SSL",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "443",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 158,
+        "name": "HTTP Proxy 8080",
+        "guid": "264b85a1-aad7-42f0-b46d-0651825ac46a",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8080",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "8080",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 108,
+        "name": "HTTP Proxy",
+        "guid": "d347741f-d31d-477b-a8b6-06dbf14ac61c",
+        "description": "Hypertext Transport Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8090",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 166,
+        "name": "HTTP 8000",
+        "guid": "099e6516-0f67-4209-8b2c-3763d004844b",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 107,
+        "name": "HTTP",
+        "guid": "ae754e67-c3e2-417f-adc8-2f98ee886648",
+        "description": "Hypertext Transport Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "80",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 207,
+        "name": "H323_3000-4000",
+        "guid": "c532a636-f725-4225-889b-08a7e04d1afc",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3000-4000",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 206,
+        "name": "H323_1720",
+        "guid": "01c70b9b-8a02-48af-abe0-df6d45db61cc",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1720",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 205,
+        "name": "H323_1719",
+        "guid": "bb901cb3-e94d-4af0-aaca-bbb2e6ddf0e1",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "1719",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 204,
+        "name": "H323_1718",
+        "guid": "bf2d4e7c-b595-48a7-bff8-24c0d9c61400",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "1718",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 111,
+        "name": "FTP",
+        "guid": "6cd4bebc-ebea-40e5-b734-b525148fe752",
+        "description": "File Transfer Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "20",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "21",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 262,
+        "name": "Freeradius",
+        "guid": "39e57021-eec9-4474-bd7c-761bdd20d907",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1812-1813",
+                "app_proto": "tcp",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "1812-1813",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 122,
+        "name": "Firebird",
+        "guid": "86e933b9-f62a-4c66-be7c-4e824e03c2b8",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "3050",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 174,
+        "name": "EPMAP",
+        "guid": "9fd27ffb-672d-4460-9311-34417b0a10c5",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "135",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 106,
+        "name": "DNS Proxy",
+        "guid": "a1833dd3-b6d4-4953-afc5-690bbf1b54e3",
+        "description": "Domain Name Service",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "10053",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "10053",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 105,
+        "name": "DNS",
+        "guid": "b90ad7f5-4f38-4558-a9f0-3c520ecacedc",
+        "description": "Domain Name Service",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "53",
+                "app_proto": "udp",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "53",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 162,
+        "name": "Discord-voice",
+        "guid": "b6ff1fe5-8689-4205-8b88-b998279cdee9",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "50000-65535",
+                "app_proto": "udp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 104,
+        "name": "DHCP",
+        "guid": "e230f9bb-2e27-4079-bc3e-96321d914747",
+        "description": "Dynamic Host Configuration Protocol",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "67",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "udp",
+                "port": "68",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 121,
+        "name": "Client-Bank Sberbank",
+        "guid": "eda9a95a-742c-45a6-a771-de9756a3df9f",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "87",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 306,
+        "name": "ClickHouse",
+        "guid": "6cda9ac3-759e-4b0f-9204-c9cdfe266e25",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "8123",
+                "app_proto": "tcp",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 120,
+        "name": "Citrix",
+        "guid": "4eb95e60-b6dd-4f1e-aa17-22bbdd18b9c6",
+        "description": "",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "1494",
+                "app_proto": "",
+                "source_port": ""
+            },
+            {
+                "proto": "tcp",
+                "port": "2598",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 102,
+        "name": "Any UDP",
+        "guid": "7e363cca-a1a8-4cb5-bd50-de1f023357f2",
+        "description": "Any UDP packet",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "udp",
+                "port": "",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 103,
+        "name": "Any TCP",
+        "guid": "6fac4fb6-a735-46cc-814a-deccfe8c9e87",
+        "description": "Any TCP packet",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "tcp",
+                "port": "",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    },
+    {
+        "id": 101,
+        "name": "Any ICMP",
+        "guid": "1232b5fc-6a9b-43b0-84d3-b5fc3163fc3a",
+        "description": "Any ICMP packet",
+        "cc": false,
+        "readonly": false,
+        "protocols": [
+            {
+                "proto": "icmp",
+                "port": "",
+                "app_proto": "",
+                "source_port": ""
+            }
+        ]
+    }
+]
