@@ -2,52 +2,150 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Карта правил UserGate NGFW</title>
+    <title>UserGate Rule Visualizer</title>
     <style>
-        body { margin: 0; display: flex; flex-direction: column; height: 100vh; }
-        #cy { flex: 1; background-color: #fafafa; border: 1px solid #ccc; }
-        .toolbar { padding: 8px; background: #eee; display: flex; gap: 10px; flex-wrap: wrap; }
-        button { padding: 6px 12px; cursor: pointer; }
+        body { margin: 0; display: flex; height: 100vh; font-family: Arial, sans-serif; }
+        .left-panel {
+            width: 320px; background: #f5f5f5; border-right: 1px solid #ccc;
+            display: flex; flex-direction: column; padding: 10px; box-sizing: border-box;
+            overflow-y: auto;
+        }
+        .right-panel { flex: 1; display: flex; flex-direction: column; }
+        #cy { flex: 1; background: #fafafa; border-bottom: 1px solid #ccc; }
+        .toolbar { padding: 8px; background: #eee; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+        select, button { padding: 4px 8px; }
+        table { width: 100%; border-collapse: collapse; font-size: 12px; margin-top: 8px; }
+        th, td { border: 1px solid #ddd; padding: 4px; text-align: left; }
+        th { background: #eee; }
+        .status-enabled { color: green; font-weight: bold; }
+        .status-disabled { color: red; font-weight: bold; }
+        .action-accept { color: green; }
+        .action-drop { color: red; }
+        tr.selected { background: #e0f7fa; }
     </style>
     <script src="https://unpkg.com/cytoscape@3.28.1/dist/cytoscape.min.js"></script>
 </head>
 <body>
-    <div class="toolbar">
-        <button id="btnReset">Сбросить вид</button>
-        <button id="btnAllow">Только разрешающие</button>
-        <button id="btnDeny">Только запрещающие</button>
-        <button id="btnAll">Все правила</button>
-        <span>💡 Нажмите на узел, чтобы подсветить связанные правила.</span>
+    <div class="left-panel">
+        <div>
+            <label>Rule Chain:</label>
+            <select id="sourceSelect">
+                <option value="fw">Firewall Rules</option>
+                <option value="web">Web Rules</option>
+            </select>
+        </div>
+        <div style="margin-top: 8px;">
+            <label>Action:</label>
+            <select id="actionSelect">
+                <option value="all">All</option>
+                <option value="accept">Accept</option>
+                <option value="drop">Drop</option>
+            </select>
+        </div>
+        <div style="margin-top: 8px;">
+            <label>Status:</label>
+            <select id="statusSelect">
+                <option value="all">All</option>
+                <option value="enabled">Enabled</option>
+                <option value="disabled">Disabled</option>
+            </select>
+        </div>
+        <div style="margin-top: 8px;">
+            <button id="applyFiltersBtn">Apply Filters</button>
+            <button id="resetLayoutBtn">Reset Layout</button>
+        </div>
+        <div style="margin-top: 12px; font-size: 10px; color: #666;">Click on node or row to highlight</div>
+        <div style="overflow-y: auto; flex: 1;" id="tableContainer">
+            <table id="rulesTable">
+                <thead>
+                    <tr>
+                        <th>Pos</th><th>Name</th><th>Action</th><th>Status</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     </div>
-    <div id="cy"></div>
+    <div class="right-panel">
+        <div id="cy"></div>
+    </div>
 
     <script>
-        (function() {
-            fetch('/api/graph')
-                .then(res => {
-                    if (!res.ok) throw new Error('Ошибка загрузки данных: ' + res.status);
-                    return res.json();
-                })
-                .then(data => {
-                    console.log('Данные графа загружены');
-                    initCytoscape(data.elements);
-                })
-                .catch(err => console.error('Ошибка:', err));
-        })();
-
         let cy;
+        let currentSource = 'fw';
+        let currentAction = 'all';
+        let currentStatus = 'all';
+
+        function fetchGraph(source, action, status) {
+            const params = new URLSearchParams({ source, action, status });
+            fetch(`/api/graph?${params}`)
+                .then(r => r.json())
+                .then(data => {
+                    if (!cy) {
+                        initCytoscape(data.elements);
+                    } else {
+                        cy.json({ elements: data.elements });
+                        cy.layout({ name: 'cose', animate: true, fit: true, padding: 20, nodeRepulsion: 4000 }).run();
+                    }
+                    document.getElementById('totalRules').innerText = data.total || 0;
+                });
+        }
+
+        function fetchRulesTable(source, action, status) {
+            const params = new URLSearchParams({ source, action, status });
+            fetch(`/api/rules?${params}`)
+                .then(r => r.json())
+                .then(data => {
+                    const tbody = document.querySelector('#rulesTable tbody');
+                    tbody.innerHTML = '';
+                    data.rules.forEach(rule => {
+                        const row = tbody.insertRow();
+                        row.insertCell().innerText = rule.position;
+                        row.insertCell().innerText = rule.name;
+                        const actionCell = row.insertCell();
+                        actionCell.innerText = rule.action;
+                        actionCell.className = rule.action === 'accept' ? 'action-accept' : 'action-drop';
+                        const statusCell = row.insertCell();
+                        statusCell.innerText = rule.enabled ? 'Enabled' : 'Disabled';
+                        statusCell.className = rule.enabled ? 'status-enabled' : 'status-disabled';
+                        row.dataset.ruleId = rule.id;
+                        row.addEventListener('click', () => {
+                            document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
+                            row.classList.add('selected');
+                            // Подсветка связанных рёбер графа
+                            if (cy) {
+                                cy.elements().removeStyle();
+                                // Найти рёбра, которые содержат этот rule id
+                                const edgesWithRule = cy.edges().filter(edge => {
+                                    const rules = edge.data('rules');
+                                    return rules && rules.includes(rule.id);
+                                });
+                                edgesWithRule.style({
+                                    'line-color': '#ff9800',
+                                    'target-arrow-color': '#ff9800',
+                                    'width': 5
+                                });
+                                // Подсветить узлы на концах
+                                edgesWithRule.connectedNodes().style({
+                                    'border-color': '#ff9800',
+                                    'border-width': 3
+                                });
+                            }
+                        });
+                    });
+                });
+        }
+
+        function loadAll() {
+            fetchGraph(currentSource, currentAction, currentStatus);
+            fetchRulesTable(currentSource, currentAction, currentStatus);
+        }
 
         function initCytoscape(elements) {
-            if (typeof cytoscape === 'undefined') {
-                console.error('Cytoscape.js не загрузилась');
-                return;
-            }
-
             cy = cytoscape({
                 container: document.getElementById('cy'),
                 elements: elements,
                 style: [
-                    // Стиль для родительских узлов (зон)
                     {
                         selector: 'node[type="zone"]',
                         style: {
@@ -59,32 +157,14 @@
                             'font-weight': 'bold',
                             'text-valign': 'top',
                             'text-halign': 'center',
-                            'padding': 10,
                             'shape': 'round-rectangle',
                             'width': 120,
                             'height': 60,
-                            'text-margin-y': -5,
+                            'padding': 10
                         }
                     },
-                    // Стиль для дочерних узлов внутри зон
                     {
-                        selector: 'node[parent]',
-                        style: {
-                            'background-color': '#fff',
-                            'border-width': 1.5,
-                            'border-color': '#888',
-                            'label': 'data(label)',
-                            'font-size': 11,
-                            'text-valign': 'center',
-                            'padding': 6,
-                            'shape': 'ellipse',
-                            'width': 80,
-                            'height': 40,
-                        }
-                    },
-                    // Стиль для разрешающих рёбер
-                    {
-                        selector: 'edge[action="allow"]',
+                        selector: 'edge[action="accept"]',
                         style: {
                             'line-color': '#4caf50',
                             'target-arrow-color': '#4caf50',
@@ -95,12 +175,11 @@
                             'font-size': 9,
                             'color': '#4caf50',
                             'text-background-color': '#fff',
-                            'text-background-opacity': 0.7,
+                            'text-background-opacity': 0.7
                         }
                     },
-                    // Стиль для запрещающих рёбер
                     {
-                        selector: 'edge[action="deny"]',
+                        selector: 'edge[action="drop"]',
                         style: {
                             'line-color': '#f44336',
                             'target-arrow-color': '#f44336',
@@ -111,94 +190,81 @@
                             'font-size': 9,
                             'color': '#f44336',
                             'text-background-color': '#fff',
-                            'text-background-opacity': 0.7,
+                            'text-background-opacity': 0.7
                         }
                     }
                 ],
                 layout: {
-                    name: 'cose',          // Встроенный force-directed layout
+                    name: 'cose',
                     fit: true,
                     padding: 30,
                     nodeRepulsion: 4000,
                     idealEdgeLength: 120,
-                    nodeDimensionsIncludeLabels: true,
                     animate: false
                 }
             });
 
-            // Подсветка рёбер и соседей при наведении мыши (замена :hover)
-            cy.on('mouseover', 'node', function(evt) {
-                const node = evt.target;
+            // События при наведении на узел – подсветка инцидентных рёбер
+            cy.on('mouseover', 'node', function(e) {
+                const node = e.target;
+                node.connectedEdges().style({
+                    'line-color': '#2196f3',
+                    'target-arrow-color': '#2196f3',
+                    'width': 5
+                });
+            });
+            cy.on('mouseout', 'node', function(e) {
+                cy.elements().removeStyle();
+            });
+
+            // Клик на узел – показать подробную информацию о всех связях
+            cy.on('tap', 'node', function(e) {
+                const node = e.target;
+                cy.elements().removeStyle();
                 node.connectedEdges().style({
                     'line-color': '#ff9800',
                     'target-arrow-color': '#ff9800',
                     'width': 5
                 });
-                node.neighborhood().nodes().style({
-                    'border-color': '#ff9800',
-                    'border-width': 3
-                });
-                node.style({
-                    'border-color': '#ff5722',
-                    'border-width': 4
-                });
-            });
-
-            cy.on('mouseout', 'node', function(evt) {
-                const node = evt.target;
-                // Возвращаем исходные стили, просто удаляя переопределения
-                cy.edges().removeStyle();
-                cy.nodes().removeStyle();
-            });
-
-            // Выделение по клику (оранжевое) остаётся
-            cy.on('tap', 'node', function(evt) {
-                cy.edges().removeStyle();
-                cy.nodes().removeStyle();
-                const node = evt.target;
-                const connectedEdges = node.connectedEdges();
-                connectedEdges.style({
-                    'line-color': '#ff9800',
-                    'target-arrow-color': '#ff9800',
-                    'width': 5
-                });
-                const neighbors = node.neighborhood().nodes();
-                neighbors.style({
-                    'border-color': '#ff9800',
-                    'border-width': 3
-                });
-                node.style({
-                    'border-color': '#ff5722',
-                    'border-width': 4
+                node.style('border-color', '#ff5722');
+                node.style('border-width', 4);
+                // Подсвечиваем соответствующие строки таблицы
+                const edgeData = node.connectedEdges().map(edge => edge.data('rules')).flat();
+                const uniqueRules = new Set(edgeData);
+                document.querySelectorAll('#rulesTable tbody tr').forEach(row => {
+                    const rid = parseInt(row.dataset.ruleId);
+                    if (uniqueRules.has(rid)) {
+                        row.classList.add('selected');
+                    } else {
+                        row.classList.remove('selected');
+                    }
                 });
             });
 
-            // Сброс по клику на фон
-            cy.on('tap', function(evt) {
-                if (evt.target === cy) {
-                    cy.edges().removeStyle();
-                    cy.nodes().removeStyle();
+            // Клик на фон – снять выделение
+            cy.on('tap', function(e) {
+                if (e.target === cy) {
+                    cy.elements().removeStyle();
+                    document.querySelectorAll('tr.selected').forEach(r => r.classList.remove('selected'));
                 }
             });
-
-            // Привязываем кнопки
-            document.getElementById('btnReset').addEventListener('click', function() {
-                cy.fit();
-                cy.edges().removeStyle();
-                cy.nodes().removeStyle();
-            });
-            document.getElementById('btnAllow').addEventListener('click', function() {
-                cy.edges().hide();
-                cy.edges('[action="allow"]').show();
-            });
-            document.getElementById('btnDeny').addEventListener('click', function() {
-                cy.edges().hide();
-                cy.edges('[action="deny"]').show();
-            });
-            document.getElementById('btnAll').addEventListener('click', function() {
-                cy.edges().show();
-            });
         }
+
+        document.getElementById('applyFiltersBtn').addEventListener('click', () => {
+            currentSource = document.getElementById('sourceSelect').value;
+            currentAction = document.getElementById('actionSelect').value;
+            currentStatus = document.getElementById('statusSelect').value;
+            loadAll();
+        });
+
+        document.getElementById('resetLayoutBtn').addEventListener('click', () => {
+            if (cy) {
+                cy.layout({ name: 'cose', animate: true, fit: true, padding: 20, nodeRepulsion: 4000 }).run();
+            }
+        });
+
+        // Первоначальная загрузка
+        loadAll();
     </script>
 </body>
 </html>
